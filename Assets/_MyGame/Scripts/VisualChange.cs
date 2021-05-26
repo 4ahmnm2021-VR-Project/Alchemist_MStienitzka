@@ -9,6 +9,7 @@ public class VisualChange : MonoBehaviour
     public Material finished;
     public Material notfinished;
     public Material wrong;
+    public GameObject Particle;
 
     void Update()
     {
@@ -23,6 +24,11 @@ public class VisualChange : MonoBehaviour
         else if (storage.cauldrenWrong)
         {
             substance.material = wrong;
+        }
+
+        if (storage.cauldronReady)
+        {
+            Particle.SetActive(true);
         }
     }
 }

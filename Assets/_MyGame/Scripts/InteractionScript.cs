@@ -1,9 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractionScript : MonoBehaviour
 {
+    public Canvas can;
+    public Text textstateOne;
+    public Text textstateTwo;
+    public Text textstateThree;
+    public string newStateOne;
+    public string newStateTwo;
+    public string newStateThree;
     public bool stateOne;
     public bool stateTwo;
     public bool stateThree;
@@ -24,6 +32,7 @@ public class InteractionScript : MonoBehaviour
             {
                 stateOne = true;
                 stoarge.cauldronNotReady = true;
+                textstateOne.text = newStateOne;
             }
             else
             {
@@ -37,6 +46,7 @@ public class InteractionScript : MonoBehaviour
             if (stateOne & !stateTwo & !stateThree)
             {
                 stateTwo = true;
+                textstateTwo.text = newStateTwo;
             }
             else
             {
@@ -52,6 +62,7 @@ public class InteractionScript : MonoBehaviour
                 stateThree = true;
                 stoarge.cauldronNotReady = false;
                 stoarge.cauldronReady = true;
+                textstateThree.text = newStateThree;
             }
             else
             {

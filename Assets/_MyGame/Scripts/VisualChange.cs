@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VisualChange : MonoBehaviour
 {
+    public Canvas canvas;
+
     public Data storage;
     public MeshRenderer substance;
     public Material finished;
@@ -11,7 +14,7 @@ public class VisualChange : MonoBehaviour
     public Material wrong;
     public GameObject Particle;
 
-    void Update()
+    private void Update()
     {
         if (storage.cauldronReady)
         {

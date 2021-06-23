@@ -7,12 +7,17 @@ public class InteractionScriptThree : MonoBehaviour
 {
     public GameObject player;
     public GameObject newCords;
+    public ParticleSystem roatator;
+
+    private IEnumerator Wait()
+    {
+        roatator.Play();
+        yield return new WaitForSeconds(8f);
+        player.transform.position = newCords.transform.position;
+    }
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "intro_bottle_full")
-        {
-            player.transform.position = newCords.transform.position;
-        }
+        StartCoroutine(Wait());
     }
 }

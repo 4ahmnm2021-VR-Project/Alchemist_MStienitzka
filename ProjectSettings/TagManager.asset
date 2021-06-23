@@ -9,6 +9,9 @@ TagManager:
   - IngredientThree
   - noIngredient
   - Knife
+  - intro_part
+  - intro_bottle_empty
+  - intro_bottle_full
   layers:
   - Default
   - TransparentFX

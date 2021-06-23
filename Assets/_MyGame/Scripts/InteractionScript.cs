@@ -26,6 +26,7 @@ public class InteractionScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
+        //Main Interaction
         if (col.gameObject.tag == "IngredientOne")
         {
             if (!stateOne & !stateTwo & !stateThree)

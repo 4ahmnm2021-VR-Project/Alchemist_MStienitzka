@@ -9,7 +9,7 @@ public class InteractionScriptThree : MonoBehaviour
     public GameObject newCords;
     public ParticleSystem roatator;
 
-    private IEnumerator Wait()
+    private IEnumerator Intro()
     {
         roatator.Play();
         yield return new WaitForSeconds(8f);
@@ -18,6 +18,9 @@ public class InteractionScriptThree : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        StartCoroutine(Wait());
+        if (col.gameObject.tag == "intro_bottle_full")
+        {
+            StartCoroutine(Intro());
+        }
     }
 }

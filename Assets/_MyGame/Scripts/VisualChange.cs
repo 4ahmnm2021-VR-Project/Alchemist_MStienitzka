@@ -12,7 +12,6 @@ public class VisualChange : MonoBehaviour
     public Material finished;
     public Material notfinished;
     public Material wrong;
-    public GameObject Particle;
 
     private void Update()
     {
@@ -31,7 +30,6 @@ public class VisualChange : MonoBehaviour
 
         if (storage.cauldronReady)
         {
-            Particle.SetActive(true);
         }
     }
 }

@@ -12,6 +12,8 @@ TagManager:
   - intro_part
   - intro_bottle_empty
   - intro_bottle_full
+  - main_bottle_empty
+  - main_bottle_full
   layers:
   - Default
   - TransparentFX

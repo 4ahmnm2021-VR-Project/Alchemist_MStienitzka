@@ -16,6 +16,7 @@ public class InteractionScript : MonoBehaviour
     public bool stateTwo;
     public bool stateThree;
     public Data stoarge;
+    public GameObject bottle;
 
     private void Awake()
     {
@@ -70,6 +71,14 @@ public class InteractionScript : MonoBehaviour
                 stoarge.cauldrenWrong = true;
                 stoarge.cauldronNotReady = false;
                 stoarge.cauldronReady = false;
+            }
+        }
+
+        if (col.gameObject.tag == "intro_bottle_empty")
+        {
+            if (stateOne & stateTwo & stateThree)
+            {
+                bottle.transform.tag = "intro_bottle_full";
             }
         }
 
